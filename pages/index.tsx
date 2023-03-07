@@ -26,9 +26,8 @@ export default function Home() {
     }
   }
   function copy(){
-    const div = document.querySelector('#text')?.textContent;
-    // document.execCommand('copy', false, div);
-    console.log(div)
+    const text = document.getElementById('#text')?.innerHTML ?? '2ss'
+    window.navigator.clipboard.writeText(text)
   }
   useEffect(()=>{
     setGoodStack(stackResult.filter(el => myStack.includes(el)))
